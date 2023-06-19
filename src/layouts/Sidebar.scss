@@ -1,0 +1,190 @@
+.Sidebar {
+    background-color: var(--grey-100);
+    border-right: 1px solid var(--grey-200);
+    flex: 0 0 250px;
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
+
+    &-section {
+        padding: 0 1em;
+
+        &:not(:last-of-type) {
+            margin-bottom: 2em;
+
+        }
+
+        &:first-of-type {
+            background-color: var(--grey-100);
+            // box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            padding: 21px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        &:last-of-type {
+            background-color: var(--clr-bg-white);
+            border-top: 1px solid lightgrey;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &-title {
+            color: var(--clr-text-grey);
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25em;
+
+        &-logo {
+            flex: 0 0 26px;
+        }
+
+        &-title {
+            align-self: flex-end;
+            color: var(--clr-text-black);
+            font-size: var(--font-size-h2);
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+    }
+
+    &-profile {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        padding: 0.75em;
+
+        &-image {
+            border-radius: 50%;
+            flex: 0 0 42px;
+            height: 42px;
+            overflow: hidden;
+        }
+
+        &-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        &-desc {
+            font-size: .875rem;
+            color: var(--grey-600);
+        }
+    }
+
+    &-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    &-link {
+        padding: 0 0.75em;
+        height: 2.75em;
+        display: flex;
+        align-items: center;
+        border-radius: 0.375em;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--grey-200);
+        }
+
+        >svg {
+            color: var(--grey-700);
+            pointer-events: none;
+
+            &:nth-of-type(2) {
+                margin-left: auto;
+            }
+        }
+
+        a {
+            flex-grow: 1;
+            color: var(--clr-text-black);
+            height: 100%;
+            line-height: 2.75em;
+        }
+
+        &--active {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: rgba($color: #77f, $alpha: 0.3);
+                height: 8px;
+                width: 60px;
+                bottom: 12px;
+                left: 0;
+            }
+        }
+    }
+
+    // Submenu
+    &-submenu {
+        font-weight: 500;
+        margin-left: 1em;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 300ms ease-out;
+
+        &.show {
+            max-height: 500px;
+            transition: max-height 300ms ease-in;
+            overflow: visible;
+        }
+
+        &-links {
+            width: 100%;
+        }
+
+        &-link {
+            color: var(--clr-text-grey);
+            display: block;
+            font-size: var(--font-size-small);
+            padding: 0.625em 1.5em;
+            border-radius: 0.25em;
+
+            &:last-of-type {
+                margin-bottom: 1em;
+            }
+
+            &:hover {
+                background-color: var(--grey-200);
+            }
+        }
+    }
+
+    // Scroll bar
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: var(--grey-100);
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: var(--grey-200);
+        border-radius: .5em;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: var(--grey-300);
+    }
+}

@@ -1,0 +1,14 @@
+.PageHeading {
+    border-bottom: 1px solid var(--grey-200);
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+
+    &-title {
+        margin-bottom: 0.25em;
+    }
+
+    &-breadcrumbs {
+        color: var(--grey-600);
+        font-size: 14px,
+    }
+}

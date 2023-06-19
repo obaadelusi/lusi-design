@@ -1,0 +1,57 @@
+.App {
+    display: flex;
+
+    &-main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+}
+
+.Page {
+    background-color: #fff;
+    padding: 2em calc(1em + 1vw);
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        width: 100%;
+    }
+
+    &__section-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 0;
+        flex-basis: 100%;
+        gap: 1em;
+        max-width: 100%;
+
+        @media (min-width: 960px) {
+            flex-basis: 48%;
+            max-width: 48%;
+        }
+    }
+
+    &__section {
+        border-radius: .5em;
+        box-shadow: 0 1px 4px rgba(#000, 0.2);
+        padding: 1.5em 1em 1em;
+        position: relative;
+
+        h2 {
+            font-size: 1rem;
+            margin-bottom: 0.25em;
+        }
+
+        >p {
+            color: var(--clr-text-grey);
+            font-size: var(--font-size-small);
+            margin-bottom: 1em;
+        }
+    }
+}

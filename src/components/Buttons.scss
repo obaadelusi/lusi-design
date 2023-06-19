@@ -1,0 +1,112 @@
+.Button {
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.325em;
+    justify-content: center;
+    padding: 0.625em 0.75em;
+    font-weight: 500;
+    margin-right: 0.5em;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        opacity: 0.875;
+    }
+
+    &:focus,
+    &:focus-visible {
+        box-shadow: 0 0 0 3px rgba(#000, 0.25);
+    }
+
+    &.small {
+        font-size: 12px;
+    }
+
+    &.medium {
+        font-size: 14px;
+    }
+
+    &.large {
+        font-size: 16px;
+    }
+
+    &-primary {
+        background-color: var(--primary-clr-light);
+        color: var(--primary-clr);
+    }
+
+    &-secondary {
+        background-color: var(--grey-200);
+        color: var(--grey-900);
+    }
+
+    &-success {
+        background-color: var(--clr-success-light);
+        color: var(--clr-success);
+    }
+
+    &-warning {
+        background-color: var(--clr-warning-light);
+        color: var(--clr-warning);
+    }
+
+    &-error {
+        background-color: var(--clr-error-light);
+        color: var(--clr-error);
+    }
+
+    &-info {
+        background-color: var(--clr-info-light);
+        color: var(--clr-info);
+    }
+
+    &.fill {
+        background-color: currentColor;
+
+        span,
+        i,
+        svg {
+            color: var(--clr-text-white);
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        border-color: currentColor;
+    }
+
+    &.text {
+        background-color: transparent;
+
+        &:hover {
+            background-color: var(--primary-clr-light);
+        }
+    }
+
+    &.fab {
+        border-radius: 24px;
+        z-index: 100;
+
+        i,
+        svg {
+            font-size: 18px;
+        }
+    }
+
+    &.round {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    &:disabled {
+        color: var(--grey-400) !important;
+        user-select: none;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
