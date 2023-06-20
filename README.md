@@ -8,8 +8,8 @@ Lusi is a UI design system that gives you ready-made UI elements, components, an
 🛠 In development...
 
 ## 🚦Components
+- [Accordion](https://lusidesign.netlify.app/components/accordion)
 - [Alerts](https://lusidesign.netlify.app/components/alerts)
-- Accordion
 - [Badges](https://lusidesign.netlify.app/components/badges)
 - [Buttons](https://lusidesign.netlify.app/components/buttons)
 - [Cards](https://lusidesign.netlify.app/components/cards)

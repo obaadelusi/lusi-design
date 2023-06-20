@@ -7,6 +7,7 @@ import App from "./App";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
+import AccordionPage from "./pages/AccordionPage";
 import AlertsPage from "./pages/AlertsPage";
 import BadgesPage from "./pages/BadgesPage";
 import ButtonsPage from "./pages/ButtonsPage";
@@ -18,6 +19,7 @@ const Router = createBrowserRouter(
       <Route path="/" element={<App />}>
         <Route path="dashboard" element={<DashboardPage />} />
         <Route path="components">
+          <Route path="accordion" element={<AccordionPage />} />
           <Route path="alerts" element={<AlertsPage />} />
           <Route path="badges" element={<BadgesPage />} />
           <Route path="buttons" element={<ButtonsPage />} />

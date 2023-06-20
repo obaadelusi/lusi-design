@@ -36,8 +36,8 @@
 
   --clr-heading: hsl(0, 0%, 10%);
 
-  --clr-text-grey: #55555f;
-  --clr-text-black: #000;
+  --clr-text-grey: #44444f;
+  --clr-text-black: #0a0a0a;
   --clr-text-white: #fff;
 
   --font-size-h1: clamp(1.75rem, 2vw, 2.125rem);

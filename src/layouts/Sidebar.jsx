@@ -37,16 +37,18 @@ const Sidebar = () => {
         <h2 className="Sidebar-section-title">COMPONENTS</h2>
         <ul className="Sidebar-links">
           <li className="Sidebar-link">
+            <ListTask />
+            &ensp;
+            <NavLink to="/components/accordion" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              Accordion
+            </NavLink>
+          </li>
+          <li className="Sidebar-link">
             <ExclamationCircle />
             &ensp;
             <NavLink to="/components/alerts" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
               Alerts
             </NavLink>
-          </li>
-          <li className="Sidebar-link">
-            <ListTask />
-            &ensp;
-            <a href="#">Accordion</a>
           </li>
           <li className="Sidebar-link">
             <PatchCheck />
