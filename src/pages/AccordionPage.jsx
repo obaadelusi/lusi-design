@@ -1,8 +1,13 @@
+import { useEffect } from "react";
+
 import PageHeading from "../components/PageHeading";
 import Accordion from "../components/Accordion";
 import faqData from "../data/data.json";
 
 const AccordionPage = () => {
+  useEffect(() => {
+    document.title = "Accordion — Lusi Design";
+  }, []);
   return (
     <div id="accordionPage" className="AccordionPage">
       <PageHeading title="Accordion" />
