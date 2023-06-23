@@ -46,25 +46,18 @@ const Alert = ({ children, action, style, variant }) => {
     <div className={`Alert Alert-${variant} ${style}`}>
       {icon}
       <p>{children}</p>
-      {action && <button className="Alert__button">{button}</button>}
+      {action && <button className="Alert-button">{button}</button>}
     </div>
   );
 };
 
-const AlertTitle = ({ children }) => {
-  return <span className="Alert__title">{children}</span>;
+Alert.Title = function ({ children }) {
+  return <span className="Alert-title">{children}</span>;
 };
 
 Alert.defaultProps = {
-  // icon: <InfoCircle />,
   style: "",
   variant: "info",
 };
-
-AlertTitle.defaultProps = {
-  children: "Info",
-};
-
-export { AlertTitle };
 
 export default Alert;

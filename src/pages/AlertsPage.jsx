@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import PageHeading from "../components/PageHeading";
-import Alert, { AlertTitle } from "../components/Alerts";
+import Alert from "../components/Alerts";
 
 const AlertsPage = () => {
   useEffect(() => {
@@ -62,19 +62,19 @@ const AlertsPage = () => {
             <h2>Advanced alerts</h2>
             <p>You can use the AlertTitle component to display a formatted title above the content.</p>
             <Alert variant="error">
-              <AlertTitle>Error</AlertTitle>
+              <Alert.Title>Error</Alert.Title>
               This is an error alert &mdash; check it out!
             </Alert>
             <Alert variant="warning">
-              <AlertTitle>Warning</AlertTitle>
+              <Alert.Title>Warning</Alert.Title>
               This is a warning alert &mdash; check it out!
             </Alert>
             <Alert variant="info">
-              <AlertTitle>Info</AlertTitle>
+              <Alert.Title>Info</Alert.Title>
               This is an info alert &mdash; check it out!
             </Alert>
             <Alert variant="success">
-              <AlertTitle>Success</AlertTitle>
+              <Alert.Title>Success</Alert.Title>
               This is a success alert &mdash; check it out!
             </Alert>
           </section>
