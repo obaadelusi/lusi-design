@@ -18,7 +18,8 @@ const Router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<App />}>
-        <Route path="dashboard" element={<DashboardPage />} />
+        <Route index element={<DashboardPage />} />
+        <Route index path="dashboard" element={<DashboardPage />} />
         <Route path="components">
           <Route path="accordion" element={<AccordionPage />} />
           <Route path="alerts" element={<AlertsPage />} />
