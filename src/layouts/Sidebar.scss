@@ -25,10 +25,17 @@
             inset: 0;
             z-index: -1;
         }
+
+        .Sidebar-menu-closeicon {
+
+            @media (max-width: 790px) {
+                display: flex;
+            }
+        }
     }
 
     &-menu-closeicon {
-        background-color: var(--grey-300);
+        background-color: var(--grey-400);
         border-radius: 50%;
         cursor: pointer;
         color: var(--clr-text-black);
@@ -36,14 +43,11 @@
         align-items: center;
         justify-content: center;
         padding: .5em;
-        position: absolute;
-        top: 1.125em;
-        right: 1em;
+        position: fixed;
+        top: 1em;
+        left: calc($sidebar-width - 60px);
         z-index: 1000;
 
-        @media (max-width: 790px) {
-            display: flex;
-        }
     }
 
     &-container {
