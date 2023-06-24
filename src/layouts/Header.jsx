@@ -1,10 +1,18 @@
-import { BellFill, ChatLeftFill, PersonFill, Search } from "react-bootstrap-icons";
+import { Bell, ChatLeft, List, Power, Search } from "react-bootstrap-icons";
 import { Badge, BadgeContainer } from "../components/Badges";
 import "./Header.scss";
 
 const Header = () => {
+  function showMenu(e) {
+    e.stopPropagation();
+    document.getElementById("sidebar").classList.add("show");
+  }
+
   return (
     <header className="Header">
+      <div className="Header-mobilemenu-icon" onClick={showMenu}>
+        <List size={28} />
+      </div>
       <label className="Header-search" htmlFor="header-search">
         <Search size={18} />
         <input type="search" name="q" id="header-search" placeholder="Search..." />
@@ -14,7 +22,7 @@ const Header = () => {
           <a href="#">
             <BadgeContainer>
               <Badge content={6} />
-              <BellFill size={20} title="notifications" />
+              <Bell size={20} title="notifications" />
             </BadgeContainer>
           </a>
         </li>
@@ -22,13 +30,13 @@ const Header = () => {
           <a href="#">
             <BadgeContainer>
               <Badge content={3} />
-              <ChatLeftFill size={20} title="messages" />
+              <ChatLeft size={20} title="messages" />
             </BadgeContainer>
           </a>
         </li>
         <li className="Header-link">
           <a href="#">
-            <PersonFill size={22} title="profile" />
+            <Power size={22} title="action" />
           </a>
         </li>
       </ul>

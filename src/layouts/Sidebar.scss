@@ -1,17 +1,86 @@
 .Sidebar {
+    $sidebar-width: 250px;
+
     background-color: var(--grey-100);
     border-right: 1px solid var(--grey-200);
-    flex: 0 0 250px;
-    height: 100vh;
-    position: relative;
-    overflow-y: auto;
+    width: 100%;
+    max-width: $sidebar-width;
+    transition: max-width 180ms ease-out;
+    overflow: hidden;
+    z-index: 1000;
+
+    @media (max-width: 790px) {
+        max-width: 0px;
+        transition: max-width 180ms ease-out;
+    }
+
+    &.show {
+        max-width: $sidebar-width;
+        transition: max-width 180ms ease-in;
+
+        &::after {
+            content: "";
+            background-color: hsla(230, 10%, 10%, 0.2);
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+        }
+    }
+
+    &-menu-closeicon {
+        background-color: var(--grey-300);
+        border-radius: 50%;
+        cursor: pointer;
+        color: var(--clr-text-black);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: .5em;
+        position: absolute;
+        top: 1.125em;
+        right: 1em;
+        z-index: 1000;
+
+        @media (max-width: 790px) {
+            display: flex;
+        }
+    }
+
+    &-container {
+        background-color: var(--grey-100);
+        display: block;
+        height: 100vh;
+        position: relative;
+        overflow: hidden auto;
+        width: $sidebar-width;
+
+        // Scroll bar
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: var(--grey-100);
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: var(--grey-200);
+            border-radius: .5em;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: var(--grey-300);
+        }
+    }
 
     &-section {
         padding: 0 1em;
 
         &:not(:last-of-type) {
             margin-bottom: 2em;
-
         }
 
         &:first-of-type {
@@ -46,6 +115,11 @@
         align-items: center;
         justify-content: center;
         gap: 0.25em;
+
+        @media (max-width: 790px) {
+            justify-content: flex-start;
+            padding-left: 1.5em;
+        }
 
         &-logo {
             flex: 0 0 26px;
@@ -165,26 +239,5 @@
                 background-color: var(--grey-200);
             }
         }
-    }
-
-    // Scroll bar
-    &::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: var(--grey-100);
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: var(--grey-200);
-        border-radius: .5em;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: var(--grey-300);
     }
 }
