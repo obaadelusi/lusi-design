@@ -1,0 +1,127 @@
+.Chip {
+    cursor: default;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.15px;
+    height: 32px;
+    margin: 0 4px 4px 0;
+    padding: 1px 8px;
+    width: fit-content;
+    transition: opacity 180ms ease-out;
+
+    &-icon,
+    &-button {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+    }
+
+    &-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    &-text {
+        white-space: nowrap;
+    }
+
+    &-button {
+        height: 18px;
+        width: 18px;
+    }
+
+    &.default {
+        background-color: var(--grey-200);
+        color: var(--grey-900);
+
+        .Chip-icon {
+            color: var(--grey-800);
+            background-color: var(--grey-300);
+        }
+
+        .Chip-button {
+            background-color: var(--grey-400);
+        }
+    }
+
+    &.primary {
+        color: var(--primary-clr);
+
+        .Chip-icon {
+            background-color: hsl(var(--hue), 55%, 40%);
+
+        }
+
+        .Chip-button {
+            background-color: hsl(var(--hue), 55%, 30%);
+        }
+    }
+
+    &.secondary {
+        color: var(--secondary-clr);
+
+        .Chip-icon {
+            background-color: var(--grey-800);
+
+        }
+
+        .Chip-button {
+            background-color: var(--grey-500);
+        }
+    }
+
+    &.success {
+        color: var(--clr-success);
+    }
+
+    &.warning {
+        color: var(--clr-warning);
+    }
+
+    &.error {
+        color: var(--clr-error);
+    }
+
+    &.info {
+        color: var(--clr-info);
+    }
+
+    &.fill {
+        background-color: currentColor;
+
+        .Chip-icon,
+        .Chip-text,
+        .Chip-button {
+            color: var(--clr-text-white);
+        }
+    }
+
+    &.outline {
+        background-color: transparent;
+        border-color: currentColor;
+
+        .Chip-icon,
+        .Chip-text {
+            color: currentColor;
+        }
+
+        .Chip-icon {
+            background-color: var(--grey-100);
+        }
+
+        .Chip-button {
+            background-color: var(--grey-300);
+        }
+    }
+}
+
+// Anything clickable
+.clickable:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}

@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock } from "react-bootstrap-icons";
 
 import "./Sidebar.scss";
 import profPicture from "../assets/profPicture.png";
 import starIcon from "../assets/starIcon.png";
-import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock } from "react-bootstrap-icons";
 
 const Sidebar = () => {
   function handleClick(e) {
@@ -74,7 +74,9 @@ const Sidebar = () => {
           <li className="Sidebar-link">
             <Capsule />
             &ensp;
-            <a href="#">Chips</a>
+            <NavLink to="/components/chips" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              Chips
+            </NavLink>
           </li>
           <li className="Sidebar-link">
             <WindowFullscreen />
