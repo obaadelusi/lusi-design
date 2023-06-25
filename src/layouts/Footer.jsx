@@ -1,17 +1,24 @@
+import { LinkButton } from "../components/Buttons";
 import "./Footer.scss";
 
 const Footer = () => {
   return (
     <footer className="Footer">
-      <ul className="Footer-links">
-        <li className="Footer-link">
-          <a href="#">Support</a>
+      <ul className="Footer-list">
+        <li className="Footer-list-item">
+          <a href="#" className="Footer-link">
+            Help Centre
+          </a>
         </li>
-        <li className="Footer-link">
-          <a href="#">Privacy</a>
+        <li className="Footer-list-item">
+          <a href="#" className="Footer-link">
+            Privacy
+          </a>
         </li>
-        <li className="Footer-link">
-          <a href="#">Help Centre</a>
+        <li className="Footer-list-item">
+          <LinkButton variant="secondary" path="https://github.com/obaadelusi/lusi-design" target="_blank">
+            GitHub
+          </LinkButton>
         </li>
       </ul>
 
