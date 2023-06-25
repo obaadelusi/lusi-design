@@ -1,32 +1,68 @@
 import "../components/Form.scss";
 import "./LoginPage.scss";
-import { LinkButton } from "../components/Buttons";
+import Alert from "../components/Alerts";
+import { Button, LinkButton } from "../components/Buttons";
 import loginImg from "../assets/loginImg.jpg";
+import starIcon from "../assets/starIcon.png";
+import { useEffect, useState } from "react";
 
 const LoginPage = () => {
+  const [alertMessage, setAlertMessage] = useState("");
+
+  useEffect(() => {
+    document.title = "Log in — Lusi Design";
+  }, []);
+
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("From the Login page button!");
+
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+
+    if (username.value == "" || password.value == "") {
+      setAlertMessage(`Please enter your username and password`);
+    } else if (username.value != "demo@lusi.app" || password.value != "xpassword") {
+      setAlertMessage("Incorrect username or password");
+      console.dir(e.target);
+    } else {
+      location.href = "/";
+    }
   }
   return (
     <div className="Login">
-      <figure className="Login-image">
+      <figure className="Login-bg-image">
         <img src={loginImg} alt="colourful background image" />
       </figure>
-      <div className="Login-container">
+      <div className="Login-form-container">
+        <figure className="Login-form-logo">
+          <img src={starIcon} alt="lusi design logo" />
+          <span>Lusi Design</span>
+        </figure>
+        <Alert>
+          Use <b>demo@lusi.app</b> and <b>xpassword</b> to log in
+        </Alert>
+
         <div className="Form Login-form">
-          <form action="#">
-            <h1 className="Form-title">Sign In</h1>
+          <form action="/" method="GET" onSubmit={handleSubmit}>
+            <h1 className="Form-title">Log In</h1>
             <div className="Form-group">
-              <label htmlFor="username">Username</label>
-              <input type="text" id="username" />
+              <label htmlFor="username">
+                Username<span>*</span>
+              </label>
+              <input type="text" id="username" name="username" defaultValue="demo@lusi.app" />
             </div>
             <div className="Form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" id="password" />
+              <label htmlFor="password">
+                Password<span>*</span>
+              </label>
+              <input type="password" id="password" name="password" defaultValue="xpassword" />
             </div>
-            <LinkButton path="/dashboard" variant="primary">
+            {alertMessage && <Alert variant="error">{alertMessage}</Alert>}
+            <Button type="submit" style="fill" variant="primary">
               Log In
+            </Button>
+            <LinkButton path="#" style="text" size="small">
+              Forgot Password
             </LinkButton>
           </form>
         </div>
