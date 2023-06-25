@@ -27,10 +27,10 @@ const FloatingActionButton = ({ action, children, isDisabled, size, style, type,
   );
 };
 
-const LinkButton = ({ children, path, size, style, variant }) => {
+const LinkButton = ({ children, path, size, style, variant, ...restProps }) => {
   return (
-    <Link to={path}>
-      <span className={`Button Button-${variant} ${style} ${size}`}>{children}</span>
+    <Link className={`Button Button-${variant} ${style} ${size}`} to={path} {...restProps}>
+      <span>{children}</span>
     </Link>
   );
 };
