@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import AccordionPage from "./pages/AccordionPage";
 import AlertsPage from "./pages/AlertsPage";
+import AvatarsPage from "./pages/AvatarsPage";
 import BadgesPage from "./pages/BadgesPage";
 import ButtonsPage from "./pages/ButtonsPage";
 import CardsPage from "./pages/CardsPage";
@@ -27,6 +28,9 @@ const Router = createBrowserRouter(
         <Route path="components">
           <Route path="accordion" element={<AccordionPage />} />
           <Route path="alerts" element={<AlertsPage />} />
+          <Route path="avatars" element={<AvatarsPage />}>
+            Avatars
+          </Route>
           <Route path="badges" element={<BadgesPage />} />
           <Route path="buttons" element={<ButtonsPage />} />
           <Route path="cards" element={<CardsPage />} />

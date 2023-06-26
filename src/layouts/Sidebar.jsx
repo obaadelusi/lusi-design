@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock, XLg } from "react-bootstrap-icons";
+import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock, XLg, PersonCircle } from "react-bootstrap-icons";
 
 import "./Sidebar.scss";
 import profPicture from "../assets/profPicture.png";
@@ -54,6 +54,13 @@ const Sidebar = () => {
               &ensp;
               <NavLink to="/components/alerts" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Alerts
+              </NavLink>
+            </li>
+            <li className="Sidebar-list-item">
+              <PersonCircle />
+              &ensp;
+              <NavLink to="/components/avatars" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+                Avatars
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
