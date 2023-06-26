@@ -80,12 +80,12 @@ const BadgesPage = () => {
 
             <BadgeContainer>
               <Badge content="7" variant="error" />
-              <Button style="fill">Button 1</Button>
+              <Button variant="fill">Button 1</Button>
             </BadgeContainer>
 
             <BadgeContainer>
               <Badge content="137" variant="error" />
-              <Button style="fill">Button 2</Button>
+              <Button variant="fill">Button 2</Button>
             </BadgeContainer>
           </section>
 

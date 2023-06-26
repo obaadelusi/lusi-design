@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
         </li>
         <li className="Footer-list-item">
-          <LinkButton variant="secondary" path="https://github.com/obaadelusi/lusi-design" target="_blank">
+          <LinkButton variant="secondary" to="https://github.com/obaadelusi/lusi-design" target="_blank">
             GitHub
           </LinkButton>
         </li>

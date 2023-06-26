@@ -22,8 +22,8 @@ const CardsPage = () => {
                 Have you ever heard a language that sounded like a song? <br />
                 There are many tonal languages in the world. Yoruba, a West African language, is a language with three tones. Think of the music tonic sofas: do re mi.
               </p>
-              <Button style="fill">Learn more</Button>
-              <Button style="text">Share</Button>
+              <Button variant="fill">Learn more</Button>
+              <Button variant="text">Share</Button>
             </CardBody>
           </Card>
         </div>
@@ -40,7 +40,7 @@ const CardsPage = () => {
               <p>
                 "alágbára ni Ọba." <em>The king is powerful.</em>
               </p>
-              <Button style="text">Share</Button>
+              <Button variant="text">Share</Button>
             </CardBody>
           </Card>
         </div>

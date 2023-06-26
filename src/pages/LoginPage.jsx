@@ -1,10 +1,12 @@
-import "../components/Form.scss";
-import "./LoginPage.scss";
+import { useEffect, useState } from "react";
+
 import Alert from "../components/Alerts";
 import { Button, LinkButton } from "../components/Buttons";
 import loginImg from "../assets/loginImg.jpg";
 import starIcon from "../assets/starIcon.png";
-import { useEffect, useState } from "react";
+
+import "../components/FormControls.scss";
+import "./LoginPage.scss";
 
 const LoginPage = () => {
   const [alertMessage, setAlertMessage] = useState("");
@@ -58,10 +60,10 @@ const LoginPage = () => {
               <input type="password" id="password" name="password" defaultValue="xpassword" />
             </div>
             {alertMessage && <Alert variant="error">{alertMessage}</Alert>}
-            <Button type="submit" style="fill" variant="primary">
+            <Button type="submit" variant="fill" color="primary">
               Log In
             </Button>
-            <LinkButton path="#" style="text" size="small">
+            <LinkButton to="#" variant="text" size="small">
               Forgot Password
             </LinkButton>
           </form>

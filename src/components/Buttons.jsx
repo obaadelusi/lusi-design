@@ -2,63 +2,57 @@ import { Link } from "react-router-dom";
 import "./Buttons.scss";
 import { InfoCircle } from "react-bootstrap-icons";
 
-const Button = ({ action, children, isDisabled, size, style, type, variant }) => {
+const Button = ({ children, size, variant, color, ...restProps }) => {
   return (
-    <button type={type} className={`Button Button-${variant} ${style} ${size}`} onClick={action} disabled={isDisabled}>
+    <button className={`Button Button-${color} ${variant} ${size}`} {...restProps}>
       <span>{children}</span>
     </button>
   );
 };
 
-const IconButton = ({ action, icon, children, isDisabled, size, style, type, variant }) => {
+const IconButton = ({ icon, children, size, variant, color, ...restProps }) => {
   return (
-    <button type={type} className={`Button Button-${variant} ${style} ${size}`} onClick={action} disabled={isDisabled}>
+    <button className={`Button Button-${color} ${variant} ${size}`} {...restProps}>
       {icon}
       <span>{children}</span>
     </button>
   );
 };
 
-const FloatingActionButton = ({ action, children, isDisabled, size, style, type, variant }) => {
+const FloatingActionButton = ({ children, size, variant, color, ...restProps }) => {
   return (
-    <button type={type} className={`Button Button-${variant} ${style} ${size} fab`} onClick={action} disabled={isDisabled}>
+    <button className={`Button Button-${color} ${variant} ${size} fab`} {...restProps}>
       {children}
     </button>
   );
 };
 
-const LinkButton = ({ children, path, size, style, variant, ...restProps }) => {
+const LinkButton = ({ children, size, variant, color, ...restProps }) => {
   return (
-    <Link className={`Button Button-${variant} ${style} ${size}`} to={path} {...restProps}>
+    <Link className={`Button Button-${color} ${variant} ${size}`} {...restProps}>
       <span>{children}</span>
     </Link>
   );
 };
 
 Button.defaultProps = {
-  variant: "primary",
-  type: "button",
-  isDisabled: false,
+  color: "primary",
   size: "medium",
 };
 
 IconButton.defaultProps = {
-  variant: "primary",
-  type: "button",
-  isDisabled: false,
+  color: "primary",
   icon: <InfoCircle />,
   size: "medium",
 };
 
 FloatingActionButton.defaultProps = {
-  variant: "primary",
-  type: "button",
-  isDisabled: false,
+  color: "primary",
   size: "medium",
 };
 
 LinkButton.defaultProps = {
-  variant: "primary",
+  color: "primary",
   size: "medium",
 };
 
