@@ -13,6 +13,7 @@ import BadgesPage from "./pages/BadgesPage";
 import ButtonsPage from "./pages/ButtonsPage";
 import CardsPage from "./pages/CardsPage";
 import ChipsPage from "./pages/ChipsPage";
+import DialogsPage from "./pages/DialogsPage";
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +28,7 @@ const Router = createBrowserRouter(
           <Route path="buttons" element={<ButtonsPage />} />
           <Route path="cards" element={<CardsPage />} />
           <Route path="chips" element={<ChipsPage />} />
+          <Route path="dialogs" element={<DialogsPage />} />
         </Route>
       </Route>
       <Route path="login" element={<LoginPage />} />

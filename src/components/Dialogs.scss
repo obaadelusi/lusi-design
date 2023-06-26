@@ -1,0 +1,58 @@
+.Dialog {
+    $content-padding: 16px;
+
+    display: none;
+
+    &.open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+    }
+
+    &-bg {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        inset: 0;
+    }
+
+    &-modal {
+        background-color: var(--clr-bg-white);
+        border-radius: 5px;
+        max-height: calc(100% - 62px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        overflow-x: hidden;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 62px);
+        z-index: 1100;
+    }
+
+    &-title {
+        font-size: 1.125rem;
+        padding: $content-padding;
+    }
+
+    &-body {
+        color: var(--clr-text-grey);
+        display: flex;
+        flex-direction: column;
+        font-size: var(--font-size-small);
+
+        &-text {
+            padding: 0 $content-padding $content-padding;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 $content-padding $content-padding;
+
+        >.Button {
+            margin-bottom: 0;
+        }
+    }
+}
