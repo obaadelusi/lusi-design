@@ -25,4 +25,10 @@
     &-copyright {
         margin-left: auto;
     }
+
+    @media (max-width: 400px) {
+        &-list-item:not(:last-of-type) {
+            display: none;
+        }
+    }
 }
