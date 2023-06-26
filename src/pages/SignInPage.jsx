@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 
 import Alert from "../components/Alerts";
 import { Button, LinkButton } from "../components/Buttons";
-import loginImg from "../assets/loginImg.jpg";
+import colorfulBg from "../assets/colorfulBg.jpg";
 import starIcon from "../assets/starIcon.png";
 
 import "../components/FormControls.scss";
-import "./LoginPage.scss";
+import "./SignInPage.scss";
 
-const LoginPage = () => {
+const SignInPage = () => {
   const [alertMessage, setAlertMessage] = useState("");
 
   useEffect(() => {
-    document.title = "Log in — Lusi Design";
+    document.title = "Sign In — Lusi Design";
   }, []);
 
   function handleSubmit(e) {
@@ -31,22 +31,22 @@ const LoginPage = () => {
     }
   }
   return (
-    <div className="Login">
-      <figure className="Login-bg-image">
-        <img src={loginImg} alt="colourful background image" />
+    <div className="SignIn">
+      <figure className="SignIn-bg-image">
+        <img src={colorfulBg} alt="colourful background image" />
       </figure>
-      <div className="Login-form-container">
-        <figure className="Login-form-logo">
+      <div className="SignIn-form-container">
+        <figure className="SignIn-form-logo">
           <img src={starIcon} alt="lusi design logo" />
           <span>Lusi Design</span>
         </figure>
         <Alert>
-          Use <b>demo@lusi.app</b> and <b>xpassword</b> to log in
+          Use <b>demo@lusi.app</b> and <b>xpassword</b> to sign in
         </Alert>
 
-        <div className="Form Login-form">
+        <div className="Form SignIn-form">
           <form action="/" method="GET" onSubmit={handleSubmit}>
-            <h1 className="Form-title">Log In</h1>
+            <h1 className="Form-title">Sign In</h1>
             <div className="Form-group">
               <label htmlFor="username">
                 Username<span>*</span>
@@ -61,7 +61,7 @@ const LoginPage = () => {
             </div>
             {alertMessage && <Alert variant="error">{alertMessage}</Alert>}
             <Button type="submit" variant="fill" color="primary">
-              Log In
+              Sign In
             </Button>
             <LinkButton to="#" variant="text" size="small">
               Forgot Password
@@ -73,4 +73,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignInPage;

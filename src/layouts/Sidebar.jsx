@@ -114,16 +114,16 @@ const Sidebar = () => {
             </li>
             <div className="Sidebar-submenu">
               <div className="Sidebar-submenu-links">
-                <a href="/login" className="Sidebar-submenu-link">
-                  Log In
+                <a href="/auth/sign-in" className="Sidebar-submenu-link">
+                  Sign In
                 </a>
-                <a href="#" className="Sidebar-submenu-link">
+                <a href="/auth/sign-up" className="Sidebar-submenu-link">
                   Sign Up
                 </a>
-                <a href="#" className="Sidebar-submenu-link">
+                <a href="/auth/404" className="Sidebar-submenu-link">
                   404 Page
                 </a>
-                <a href="#" className="Sidebar-submenu-link">
+                <a href="/auth/500" className="Sidebar-submenu-link">
                   500 Page
                 </a>
               </div>

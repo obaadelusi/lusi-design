@@ -4,7 +4,8 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 
 import "./index.css";
 import App from "./App";
-import LoginPage from "./pages/LoginPage";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import AccordionPage from "./pages/AccordionPage";
@@ -14,6 +15,8 @@ import ButtonsPage from "./pages/ButtonsPage";
 import CardsPage from "./pages/CardsPage";
 import ChipsPage from "./pages/ChipsPage";
 import DialogsPage from "./pages/DialogsPage";
+import Error404Page from "./pages/Error404Page";
+import Error500Page from "./pages/Error500Page";
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +34,13 @@ const Router = createBrowserRouter(
           <Route path="dialogs" element={<DialogsPage />} />
         </Route>
       </Route>
-      <Route path="login" element={<LoginPage />} />
+      <Route path="auth">
+        <Route path="sign-in" element={<SignInPage />} />
+        <Route path="sign-up" element={<SignUpPage />} />
+        <Route path="404" element={<Error404Page />} />
+        <Route path="500" element={<Error500Page />} />
+      </Route>
+      <Route path="*" element={<Error404Page />} />
     </>
   )
 );
