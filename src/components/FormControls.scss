@@ -44,6 +44,27 @@
                 border-color: var(--primary-clr);
             }
         }
+
+        select {
+            cursor: pointer;
+            border: 1.5px solid var(--grey-500);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 0.875rem;
+            outline: none;
+            padding: 0.75em 0.75em;
+            transition: 200ms ease-in;
+            width: 100%;
+
+            &:hover {
+                box-shadow: 0 0 0 4px var(--grey-200);
+            }
+
+            &:focus,
+            &:focus-visible {
+                border-color: var(--primary-clr);
+            }
+        }
     }
 }
 
