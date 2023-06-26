@@ -1,4 +1,4 @@
-import "./Form.scss";
+import "./FormControls.scss";
 
 const ToggleSwitch = ({ children, defaultCheck, onToggle }) => {
   function handleChange(e) {
