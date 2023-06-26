@@ -1,7 +1,12 @@
+import { useEffect } from "react";
+
 import { LinkButton } from "../components/Buttons";
 import "./ErrorPage.scss";
 
 const Error404Page = () => {
+  useEffect(() => {
+    document.title = "Page Not Found — Lusi Design";
+  }, []);
   return (
     <div className="ErrorPage">
       <div className="ErrorPage-container">

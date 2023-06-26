@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
+
 import PageHeading from "../components/PageHeading";
 import { Button } from "../components/Buttons";
 import { Dialog } from "../components/Dialogs";
-import { useState } from "react";
 
 const DialogsPage = () => {
   const [showSimpleDialog, setShowSimpleDialog] = useState(false);
@@ -10,6 +11,10 @@ const DialogsPage = () => {
   const [showBgClickDialog, setShowBgClickDialog] = useState(false);
   const [dialogWidth, setDialogWidth] = useState("xs");
   const [selectedButton, setSelectedButton] = useState();
+
+  useEffect(() => {
+    document.title = "Dialogs — Lusi Design";
+  }, []);
 
   function handleButtonClick(e) {
     setShowSimpleDialog(false);

@@ -1,7 +1,12 @@
+import { useEffect } from "react";
+
 import { LinkButton } from "../components/Buttons";
 import "./ErrorPage.scss";
 
 const Error500Page = () => {
+  useEffect(() => {
+    document.title = "Server error — Lusi Design";
+  }, []);
   return (
     <div className="ErrorPage">
       <div className="ErrorPage-container">
