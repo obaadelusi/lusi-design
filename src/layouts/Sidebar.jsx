@@ -30,7 +30,7 @@ const Sidebar = () => {
         </section>
         <section className="Sidebar-section">
           <ul className="Sidebar-links">
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <ColumnsGap />
               &ensp;
               <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
@@ -41,60 +41,62 @@ const Sidebar = () => {
         </section>
         <section className="Sidebar-section">
           <h2 className="Sidebar-section-title">COMPONENTS</h2>
-          <ul className="Sidebar-links">
-            <li className="Sidebar-link">
+          <ul className="Sidebar-list">
+            <li className="Sidebar-list-item">
               <ListTask />
               &ensp;
               <NavLink to="/components/accordion" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Accordion
               </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <ExclamationCircle />
               &ensp;
               <NavLink to="/components/alerts" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Alerts
               </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <PatchCheck />
               &ensp;
               <NavLink to="/components/badges" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Badges
               </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <PlusSquare />
               &ensp;
               <NavLink to="/components/buttons" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Buttons
               </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <CardHeading />
               &ensp;
               <NavLink to="/components/cards" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Cards
               </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <Capsule />
               &ensp;
               <NavLink to="/components/chips" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
                 Chips
               </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <WindowFullscreen />
               &ensp;
-              <a href="#">Dialogs</a>
+              <NavLink to="/components/dialogs" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+                Dialogs
+              </NavLink>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <MenuButton />
               &ensp;
               <a href="#">Menus</a>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <ChatSquareDots />
               &ensp;
               <a href="#">Tooltips</a>
@@ -104,7 +106,7 @@ const Sidebar = () => {
         <section className="Sidebar-section">
           <h2 className="Sidebar-section-title">PAGES</h2>
           <ul className="Sidebar-links">
-            <li className="Sidebar-link" onClick={toggleSubmenu}>
+            <li className="Sidebar-list-item" onClick={toggleSubmenu}>
               <Lock />
               &ensp;
               <div>Auth</div>
@@ -113,7 +115,7 @@ const Sidebar = () => {
             <div className="Sidebar-submenu">
               <div className="Sidebar-submenu-links">
                 <a href="/login" className="Sidebar-submenu-link">
-                  Sign In
+                  Log In
                 </a>
                 <a href="#" className="Sidebar-submenu-link">
                   Sign Up
@@ -126,22 +128,22 @@ const Sidebar = () => {
                 </a>
               </div>
             </div>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <Coin />
               &ensp;
               <a href="#">Pricing</a>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <PersonGear />
               &ensp;
               <a href="#">Profile</a>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <Receipt />
               &ensp;
               <a href="#">Invoice</a>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <Gear />
               &ensp;
               <a href="#">Settings</a>
@@ -151,12 +153,12 @@ const Sidebar = () => {
         <section className="Sidebar-section">
           <h2 className="Sidebar-section-title">ELEMENTS</h2>
           <ul className="Sidebar-links">
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <PieChart />
               &ensp;
               <a href="#">Charts</a>
             </li>
-            <li className="Sidebar-link" onClick={toggleSubmenu}>
+            <li className="Sidebar-list-item" onClick={toggleSubmenu}>
               <Check2Square />
               &ensp;
               <div>Forms</div>
@@ -178,12 +180,12 @@ const Sidebar = () => {
                 </a>
               </div>
             </div>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <Table />
               &ensp;
               <a href="#">Tables</a>
             </li>
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <Heart />
               &ensp;
               <a href="#">Icons</a>
@@ -192,7 +194,7 @@ const Sidebar = () => {
         </section>
         <section className="Sidebar-section">
           <ul className="Sidebar-links">
-            <li className="Sidebar-link">
+            <li className="Sidebar-list-item">
               <FileTextFill />
               &ensp;
               <a href="#">Documentation</a>
