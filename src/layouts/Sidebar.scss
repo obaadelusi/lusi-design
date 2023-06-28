@@ -194,19 +194,19 @@
             height: 100%;
             line-height: 2.75em;
         }
+    }
 
-        &--active {
-            position: relative;
+    &-link--active {
+        position: relative;
 
-            &::after {
-                content: "";
-                position: absolute;
-                background-color: rgba($color: #77f, $alpha: 0.3);
-                height: 8px;
-                width: 60px;
-                bottom: 12px;
-                left: 0;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: rgba($color: #77f, $alpha: 0.3);
+            height: 8px;
+            width: 60px;
+            bottom: 12px;
+            left: 0;
         }
     }
 
