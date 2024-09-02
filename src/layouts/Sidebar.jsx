@@ -1,17 +1,17 @@
-import { NavLink } from "react-router-dom";
-import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock, XLg, PersonCircle } from "react-bootstrap-icons";
+import { NavLink } from 'react-router-dom';
+import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock, XLg, PersonCircle } from 'react-bootstrap-icons';
 
-import "./Sidebar.scss";
-import profPicture from "../assets/profPicture.png";
-import starIcon from "../assets/starIcon.png";
+import './Sidebar.scss';
+import profPicture from '../assets/obaAdelusi.png';
+import starIcon from '../assets/starIcon.png';
 
 const Sidebar = () => {
   function toggleSubmenu(e) {
-    e.target.nextElementSibling.classList.toggle("show");
+    e.target.nextElementSibling.classList.toggle('show');
   }
 
   function hideSidebar() {
-    document.getElementById("sidebar").classList.remove("show");
+    document.getElementById('sidebar').classList.remove('show');
   }
 
   return (
@@ -33,7 +33,7 @@ const Sidebar = () => {
             <li className="Sidebar-list-item">
               <ColumnsGap />
               &ensp;
-              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Dashboard
               </NavLink>
             </li>
@@ -45,56 +45,56 @@ const Sidebar = () => {
             <li className="Sidebar-list-item">
               <ListTask />
               &ensp;
-              <NavLink to="/components/accordion" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/accordion" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Accordion
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <ExclamationCircle />
               &ensp;
-              <NavLink to="/components/alerts" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/alerts" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Alerts
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <PersonCircle />
               &ensp;
-              <NavLink to="/components/avatars" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/avatars" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Avatars
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <PatchCheck />
               &ensp;
-              <NavLink to="/components/badges" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/badges" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Badges
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <PlusSquare />
               &ensp;
-              <NavLink to="/components/buttons" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/buttons" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Buttons
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <CardHeading />
               &ensp;
-              <NavLink to="/components/cards" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/cards" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Cards
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <Capsule />
               &ensp;
-              <NavLink to="/components/chips" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/chips" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Chips
               </NavLink>
             </li>
             <li className="Sidebar-list-item">
               <WindowFullscreen />
               &ensp;
-              <NavLink to="/components/dialogs" className={({ isActive }) => (isActive ? "Sidebar-link--active" : undefined)}>
+              <NavLink to="/components/dialogs" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Dialogs
               </NavLink>
             </li>
