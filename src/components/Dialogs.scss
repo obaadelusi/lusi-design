@@ -12,13 +12,15 @@
 
     &-bg {
         display: block;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(5px);
         position: fixed;
         inset: 0;
     }
 
     &-modal {
         background-color: var(--clr-bg-white);
+        border: 2px solid var(--grey-600);
         border-radius: 5px;
         max-height: calc(100% - 62px);
         position: absolute;
