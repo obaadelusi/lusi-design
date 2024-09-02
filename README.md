@@ -13,8 +13,8 @@ Lusi is a UI design system that gives you ready-made UI elements, components, an
 - [Badges](https://lusidesign.netlify.app/components/badges)
 - [Buttons](https://lusidesign.netlify.app/components/buttons)
 - [Cards](https://lusidesign.netlify.app/components/cards)
-- Chips
-- Dialogs
+- [Chips](https://lusidesign.netlify.app/components/chips)
+- [Dialogs](https://lusidesign.netlify.app/components/dialogs)
 - Menus 
 - Tooltips
 
