@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import PageHeading from "../components/PageHeading";
-import { Button } from "../components/Buttons";
-import { Dialog } from "../components/Dialogs";
+import PageHeading from '../components/PageHeading';
+import { Button } from '../components/Buttons';
+import { Dialog } from '../components/Dialogs';
 
 const DialogsPage = () => {
   const [showSimpleDialog, setShowSimpleDialog] = useState(false);
   const [showAlertDialog, setShowAlertDialog] = useState(false);
   const [showMaxWidthDialog, setShowMaxWidthDialog] = useState(false);
   const [showBgClickDialog, setShowBgClickDialog] = useState(false);
-  const [dialogWidth, setDialogWidth] = useState("xs");
+  const [dialogWidth, setDialogWidth] = useState('xs');
   const [selectedButton, setSelectedButton] = useState();
 
   useEffect(() => {
-    document.title = "Dialogs — Lusi Design";
+    document.title = 'Dialogs — Lusi Design';
   }, []);
 
   function handleButtonClick(e) {
@@ -39,12 +39,15 @@ const DialogsPage = () => {
             <Button onClick={() => setShowSimpleDialog((prev) => !prev)} variant="fill">
               Open simple dialog
             </Button>
-            <small style={{ display: "block" }}>Selected: {selectedButton}</small>
+            <small style={{ display: 'block' }}>Selected: {selectedButton}</small>
 
             {showSimpleDialog && (
               <Dialog onBgClick={() => setShowSimpleDialog(false)} maxWidth="sm">
-                <Dialog.Title>Select a button</Dialog.Title>
-                <Dialog.Body></Dialog.Body>
+                <Dialog.Heading>Select a button</Dialog.Heading>
+                <Dialog.Body>
+                  <Dialog.BodyText>This is a Dialog.BodyText</Dialog.BodyText>
+                  <p>And this is a regular {'<p></p>'} tag</p>
+                </Dialog.Body>
                 <Dialog.Buttons>
                   <Button onClick={handleButtonClick} color="secondary" variant="text">
                     Cancel
@@ -69,7 +72,7 @@ const DialogsPage = () => {
 
             {showAlertDialog && (
               <Dialog onBgClick={() => setShowAlertDialog(false)}>
-                <Dialog.Title>Make Lucy Grace admin?</Dialog.Title>
+                <Dialog.Heading>Make Lucy Grace admin?</Dialog.Heading>
                 <Dialog.Body>
                   <Dialog.BodyText>Lucy Grace will be able to view reports, manage properties, generate payroll, approve leave, and manage other admins.</Dialog.BodyText>
                 </Dialog.Body>
@@ -95,11 +98,11 @@ const DialogsPage = () => {
             </Button>
             {showMaxWidthDialog && (
               <Dialog onBgClick={() => setShowMaxWidthDialog(false)} maxWidth={dialogWidth}>
-                <Dialog.Title>Optional Sizes</Dialog.Title>
+                <Dialog.Heading>Optional Sizes</Dialog.Heading>
                 <Dialog.Body>
                   <Dialog.BodyText>You can set maxWidth using these values. Note: view on large screen to see effect.</Dialog.BodyText>
                   <div className="Form-group">
-                    <label htmlFor="max-width" style={{ width: "80px", margin: "0 auto", color: "var(--grey-600)" }}>
+                    <label htmlFor="max-width" style={{ width: '80px', margin: '0 auto', color: 'var(--grey-600)' }}>
                       maxWidth
                       <select name="maxWidth" id="max-width" defaultValue={dialogWidth} onChange={handleSelectChange}>
                         <option value="xs">xs</option>
@@ -131,11 +134,11 @@ const DialogsPage = () => {
 
             {showBgClickDialog && (
               <Dialog>
-                <Dialog.Title>No Background Click</Dialog.Title>
+                <Dialog.Heading>No Background Click</Dialog.Heading>
                 <Dialog.Body>
                   <Dialog.BodyText>Click the background to NOT close.</Dialog.BodyText>
                   <Dialog.BodyText>
-                    To add background functionality set prop: <code>onBgClick={"{() => setShowState(p => !p)}"}</code>
+                    To add background functionality set prop: <code>onBgClick={'{() => setShowState(p => !p)}'}</code>
                   </Dialog.BodyText>
                 </Dialog.Body>
                 <Dialog.Buttons>

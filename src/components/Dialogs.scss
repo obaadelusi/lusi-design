@@ -32,26 +32,26 @@
         z-index: 1100;
     }
 
-    &-title {
-        font-size: 1.125rem;
-        padding: $content-padding;
+    &-heading {
+        font-size: var(--font-size-h3);
+        margin: $content-padding;
     }
 
     &-body {
-        color: var(--clr-text-grey);
         display: flex;
         flex-direction: column;
-        font-size: var(--font-size-small);
+        margin: $content-padding;
 
         &-text {
-            padding: 0 $content-padding $content-padding;
+            color: var(--clr-text-grey);
+            font-size: var(--font-size-small);
         }
     }
 
     &-buttons {
         display: flex;
         justify-content: flex-end;
-        padding: 0 $content-padding $content-padding;
+        margin: $content-padding;
 
         >.Button {
             margin-bottom: 0;

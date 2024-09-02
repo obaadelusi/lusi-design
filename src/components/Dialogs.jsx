@@ -1,26 +1,26 @@
-import "./Dialogs.scss";
+import './Dialogs.scss';
 
 const Dialog = ({ children, onBgClick, maxWidth }) => {
   function getMaxWidth() {
     let w;
     switch (maxWidth) {
-      case "xs":
-        w = "290px";
+      case 'xs':
+        w = '290px';
         break;
-      case "sm":
-        w = "460px";
+      case 'sm':
+        w = '460px';
         break;
-      case "md":
-        w = "600px";
+      case 'md':
+        w = '600px';
         break;
-      case "lg":
-        w = "960px";
+      case 'lg':
+        w = '960px';
         break;
-      case "xl":
-        w = "1280px";
+      case 'xl':
+        w = '1280px';
         break;
       default:
-        w = "600px";
+        w = '600px';
         break;
     }
 
@@ -37,19 +37,19 @@ const Dialog = ({ children, onBgClick, maxWidth }) => {
   );
 };
 
-Dialog.Title = function DialogTitle({ children }) {
-  return <h2 className="Dialog-title">{children}</h2>;
+Dialog.Heading = ({ children }) => {
+  return <h2 className="Dialog-heading">{children}</h2>;
 };
 
-Dialog.Body = function DialogBody({ children }) {
+Dialog.Body = ({ children }) => {
   return <div className="Dialog-body">{children}</div>;
 };
 
-Dialog.BodyText = function DialogBodyText({ children }) {
+Dialog.BodyText = ({ children }) => {
   return <p className="Dialog-body-text">{children}</p>;
 };
 
-Dialog.Buttons = function DialogButtons({ children }) {
+Dialog.Buttons = ({ children }) => {
   return <div className="Dialog-buttons">{children}</div>;
 };
 
