@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import PageHeading from "../components/PageHeading";
-import Avatar from "../components/Avatar";
-import profPicture from "../assets/profPicture.png";
-import { ClipboardFill, FolderFill, Search } from "react-bootstrap-icons";
+import PageHeading from '../components/PageHeading';
+import Avatar from '../components/Avatar';
+import profPicture from '../assets/obaAdelusi.png';
+import { ClipboardFill, FolderFill, Search } from 'react-bootstrap-icons';
 
 const AvatarsPage = () => {
   React.useEffect(() => {
-    document.title = "Avatars — Lusi Design";
+    document.title = 'Avatars — Lusi Design';
   }, []);
   return (
     <div className="AvatarsPage">
