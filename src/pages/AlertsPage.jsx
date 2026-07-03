@@ -5,7 +5,7 @@ import Alert from "../components/Alerts";
 
 const AlertsPage = () => {
   useEffect(() => {
-    document.title = "Alerts — Lusi Design";
+    document.title = "Alerts — Components | Lusi Design";
   }, []);
 
   return (

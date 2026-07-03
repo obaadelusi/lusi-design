@@ -1,0 +1,367 @@
+.SalesReportPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+
+  .KPI-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5em;
+    width: 100%;
+    margin-bottom: 0.5em;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  /* Sales Pipeline Funnel Styles */
+  .Funnel-card {
+    background: var(--clr-bg-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--grey-200);
+    padding: 1.5em;
+    width: 100%;
+
+    .Funnel-header {
+      margin-bottom: 1.5em;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--clr-heading);
+        margin: 0 0 4px 0;
+      }
+
+      .Funnel-subtitle {
+        font-size: 12px;
+        color: var(--grey-500);
+      }
+    }
+
+    .Funnel-steps {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    .Funnel-step {
+      flex: 1;
+      background: var(--grey-50);
+      border: 1px solid var(--grey-200);
+      border-radius: 8px;
+      padding: 1em;
+      text-align: center;
+      position: relative;
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+        border-color: var(--primary-clr-light);
+      }
+
+      .Step-label {
+        font-size: 12px;
+        color: var(--grey-500);
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        display: block;
+        margin-bottom: 0.25em;
+      }
+
+      .Step-count {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--clr-text-black);
+        display: block;
+        margin-bottom: 0.4em;
+      }
+
+      .Step-conversion {
+        font-size: 11px;
+        color: var(--grey-600);
+        background: var(--grey-200);
+        padding: 2px 6px;
+        border-radius: 10px;
+        font-weight: 500;
+      }
+    }
+
+    .Funnel-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--grey-400);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0 0.5em;
+
+      svg {
+        font-size: 18px;
+        color: var(--grey-500);
+      }
+
+      .Arrow-rate {
+        font-size: 11px;
+        color: var(--clr-success);
+        margin-top: 2px;
+      }
+
+      @media (max-width: 768px) {
+        transform: rotate(90deg);
+        padding: 0.5em 0;
+      }
+    }
+  }
+
+  .Charts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5em;
+    width: 100%;
+    margin-bottom: 0.5em;
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .Chart-card-wrapper {
+      background: var(--clr-bg-white);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--grey-200);
+      padding: 1.5em;
+      display: flex;
+      flex-direction: column;
+      min-height: 350px;
+
+      &.double {
+        @media (min-width: 992px) {
+          grid-column: span 2;
+        }
+      }
+
+      &.triple {
+        @media (min-width: 992px) {
+          grid-column: span 3;
+        }
+      }
+    }
+
+    .Chart-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    .Chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--clr-heading);
+        margin: 0 0 4px 0;
+      }
+
+      .Chart-subtitle {
+        font-size: 12px;
+        color: var(--grey-500);
+      }
+    }
+
+    .Chart-container {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* Performance stats cards */
+  .Performance-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    height: 100%;
+    flex-grow: 1;
+
+    .Perf-stat-box {
+      background-color: var(--grey-50);
+      padding: 1em;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+      border: 1px solid var(--grey-200);
+
+      .Perf-label {
+        font-size: 11px;
+        color: var(--grey-500);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+      }
+
+      .Perf-value-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        .Perf-value {
+          font-size: 24px;
+          font-weight: 700;
+          color: var(--clr-text-black);
+        }
+
+        .Perf-change {
+          font-size: 12px;
+          font-weight: 600;
+
+          &.positive {
+            color: var(--clr-success);
+          }
+        }
+      }
+
+      .Sparkline-container {
+        height: 35px;
+        width: 100%;
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  /* West Africa Map Styling */
+  .Map-card-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .Map-svg-container {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--grey-50);
+      border-radius: 8px;
+      border: 1px solid var(--grey-200);
+      overflow: hidden;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      max-height: 240px;
+    }
+
+    .map-country {
+      stroke: var(--clr-bg-white);
+      stroke-width: 1.5px;
+      transition: fill 0.2s ease, stroke-width 0.2s ease;
+      cursor: pointer;
+
+      &.inactive {
+        fill: var(--grey-200);
+        cursor: default;
+
+        &:hover {
+          fill: var(--grey-250);
+        }
+      }
+
+      &:hover:not(.inactive) {
+        opacity: 0.95;
+        stroke: var(--primary-clr);
+        stroke-width: 2px;
+      }
+    }
+
+    /* Map Tooltip */
+    .Map-tooltip {
+      position: absolute;
+      background: rgba(33, 33, 33, 0.95);
+      color: var(--clr-text-white);
+      padding: 0.6em 0.8em;
+      border-radius: 6px;
+      font-size: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      pointer-events: none;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 120px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+
+      .Tooltip-country {
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 2px;
+        margin-bottom: 2px;
+      }
+
+      .Tooltip-sales {
+        font-weight: 600;
+      }
+
+      .Tooltip-pct {
+        color: var(--grey-400);
+        font-size: 10px;
+      }
+    }
+
+    /* Legend */
+    .Map-legend {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-top: 1em;
+      flex-wrap: wrap;
+
+      .Legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--grey-700);
+
+        .Legend-color {
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}

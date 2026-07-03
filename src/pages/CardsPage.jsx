@@ -6,7 +6,7 @@ import PageHeading from "../components/PageHeading";
 
 const CardsPage = () => {
   useEffect(() => {
-    document.title = "Cards — Lusi Design";
+    document.title = "Cards — Components | Lusi Design";
   }, []);
 
   return (

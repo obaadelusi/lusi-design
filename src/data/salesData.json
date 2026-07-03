@@ -1,0 +1,50 @@
+{
+  "funnel": {
+    "leads": 1240,
+    "contacted": 840,
+    "interested": 450,
+    "paying": 210
+  },
+  "kpi": {
+    "totalLeads": {
+      "value": 1240,
+      "change": "+12.4% vs last month"
+    },
+    "contactedLeads": {
+      "value": 840,
+      "change": "67.7% conversion"
+    },
+    "proformaInvoices": {
+      "count": 380,
+      "value": 452000
+    },
+    "invoices": {
+      "count": 210,
+      "value": 324500
+    }
+  },
+  "salesSplit": {
+    "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "internal": [120000, 135000, 150000, 180000, 195000, 214500],
+    "marketers": [50000, 62000, 75000, 90000, 98000, 110000]
+  },
+  "performance": {
+    "aov": {
+      "current": 1540,
+      "change": "+5.2% vs last month",
+      "history": [1420, 1450, 1480, 1510, 1500, 1540]
+    },
+    "cltv": {
+      "current": 8450,
+      "change": "+3.8% vs last quarter",
+      "history": [7800, 7950, 8100, 8250, 8300, 8450]
+    }
+  },
+  "countrySales": [
+    { "code": "NG", "country": "Nigeria", "sales": 145000, "percentage": 44.7 },
+    { "code": "GH", "country": "Ghana", "sales": 82000, "percentage": 25.3 },
+    { "code": "CI", "country": "Ivory Coast", "sales": 48000, "percentage": 14.8 },
+    { "code": "SN", "country": "Senegal", "sales": 29000, "percentage": 8.9 },
+    { "code": "CM", "country": "Cameroon", "sales": 20500, "percentage": 6.3 }
+  ]
+}

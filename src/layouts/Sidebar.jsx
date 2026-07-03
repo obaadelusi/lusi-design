@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock, XLg, PersonCircle } from 'react-bootstrap-icons';
+import { Capsule, CardHeading, ChatSquareDots, Coin, ColumnsGap, ExclamationCircle, FileTextFill, Gear, ListTask, MenuButton, PatchCheck, PlusSquare, Receipt, WindowFullscreen, PersonGear, ChevronDown, PieChart, Check2Square, Table, Heart, Lock, XLg, PersonCircle, Calendar3, Person, BoxSeam, CashStack } from 'react-bootstrap-icons';
 
 import './Sidebar.scss';
 import profPicture from '../assets/obaAdelusi.png';
@@ -29,12 +29,34 @@ const Sidebar = () => {
           </div>
         </section>
         <section className="Sidebar-section">
+          <h2 className="Sidebar-section-title">DASHBOARDS</h2>
           <ul className="Sidebar-links">
             <li className="Sidebar-list-item">
               <ColumnsGap />
               &ensp;
-              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
-                Dashboard
+              <NavLink to="/dashboard/overview" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
+                Overview
+              </NavLink>
+            </li>
+            <li className="Sidebar-list-item">
+              <BoxSeam />
+              &ensp;
+              <NavLink to="/dashboard/inventory-report" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
+                Inventory Report
+              </NavLink>
+            </li>
+            <li className="Sidebar-list-item">
+              <CashStack />
+              &ensp;
+              <NavLink to="/dashboard/sales-report" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
+                Sales Report
+              </NavLink>
+            </li>
+            <li className="Sidebar-list-item">
+              <PersonCircle />
+              &ensp;
+              <NavLink to="/dashboard/supplier-report" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
+                Supplier Report
               </NavLink>
             </li>
           </ul>
@@ -96,6 +118,13 @@ const Sidebar = () => {
               &ensp;
               <NavLink to="/components/dialogs" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
                 Dialogs
+              </NavLink>
+            </li>
+            <li className="Sidebar-list-item">
+              <Calendar3 />
+              &ensp;
+              <NavLink to="/components/selectors" className={({ isActive }) => (isActive ? 'Sidebar-link--active' : undefined)}>
+                Selectors
               </NavLink>
             </li>
             <li className="Sidebar-list-item">

@@ -6,7 +6,7 @@ import faqData from "../data/data.json";
 
 const AccordionPage = () => {
   useEffect(() => {
-    document.title = "Accordion — Lusi Design";
+    document.title = "Accordion — Components | Lusi Design";
   }, []);
   return (
     <div id="accordionPage" className="AccordionPage">

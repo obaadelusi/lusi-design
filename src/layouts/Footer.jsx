@@ -1,5 +1,5 @@
-import { LinkButton } from "../components/Buttons";
-import "./Footer.scss";
+import { LinkButton } from '../components/Buttons';
+import './Footer.scss';
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
         </li>
       </ul>
 
-      <div className="Footer-copyright">&copy;2023 Lusi</div>
+      <div className="Footer-copyright">&copy;{new Date().getFullYear()} Lusi Design</div>
     </footer>
   );
 };

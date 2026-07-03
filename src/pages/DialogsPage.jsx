@@ -13,7 +13,7 @@ const DialogsPage = () => {
   const [selectedButton, setSelectedButton] = useState();
 
   useEffect(() => {
-    document.title = 'Dialogs — Lusi Design';
+    document.title = 'Dialogs — Components | Lusi Design';
   }, []);
 
   function handleButtonClick(e) {

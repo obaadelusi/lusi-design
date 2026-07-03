@@ -10,7 +10,7 @@ const BadgesPage = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
-    document.title = "Badges — Lusi Design";
+    document.title = "Badges — Components | Lusi Design";
   }, []);
 
   function handleToggle(input) {

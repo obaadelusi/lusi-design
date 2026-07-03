@@ -6,7 +6,7 @@ import { CaretUpFill, MicFill, Pencil, PencilSquare, PlusLg, Save, ShareFill, Tr
 
 const ButtonsPage = () => {
   useEffect(() => {
-    document.title = "Buttons — Lusi Design";
+    document.title = "Buttons — Components | Lusi Design";
   }, []);
 
   return (

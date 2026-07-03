@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import "./Cards.scss";
 
-const Card = ({ children }) => {
-  return <div className="Card">{children}</div>;
+const Card = ({ children, className, ...props }) => {
+  return <div className={`Card ${className || ""}`} {...props}>{children}</div>;
 };
 
-const CardBody = ({ children }) => {
-  return <div className="Card-body">{children}</div>;
+const CardBody = ({ children, className, ...props }) => {
+  return <div className={`Card-body ${className || ""}`} {...props}>{children}</div>;
 };
 
 const CardImage = ({ src }) => {

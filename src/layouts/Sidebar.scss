@@ -198,13 +198,14 @@
 
     &-link--active {
         position: relative;
+        font-weight: 500;
 
         &::after {
             content: "";
             position: absolute;
             background-color: rgba($color: #77f, $alpha: 0.3);
             height: 8px;
-            width: 60px;
+            width: 70px;
             bottom: 12px;
             left: 0;
         }

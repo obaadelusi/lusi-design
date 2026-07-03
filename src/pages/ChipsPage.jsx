@@ -7,7 +7,7 @@ import { CheckLg, PersonCircle, PersonDashFill, PersonExclamation, PersonFill, X
 const ChipsPage = () => {
   const [chipData, setChipData] = useState([]);
   useEffect(() => {
-    document.title = "Chips — Lusi Design";
+    document.title = "Chips — Components | Lusi Design";
     const languages = ["English", "Chinese", "⚡ French", "Vietnamese", "Yoruba"];
     setChipData(languages);
   }, []);

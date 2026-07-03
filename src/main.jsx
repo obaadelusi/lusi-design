@@ -1,30 +1,39 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Navigate } from 'react-router-dom';
 
-import "./index.css";
-import App from "./App";
-import SignInPage from "./pages/SignInPage";
-import SignUpPage from "./pages/SignUpPage";
-import HomePage from "./pages/HomePage";
-import DashboardPage from "./pages/DashboardPage";
-import AccordionPage from "./pages/AccordionPage";
-import AlertsPage from "./pages/AlertsPage";
-import AvatarsPage from "./pages/AvatarsPage";
-import BadgesPage from "./pages/BadgesPage";
-import ButtonsPage from "./pages/ButtonsPage";
-import CardsPage from "./pages/CardsPage";
-import ChipsPage from "./pages/ChipsPage";
-import DialogsPage from "./pages/DialogsPage";
-import Error404Page from "./pages/Error404Page";
-import Error500Page from "./pages/Error500Page";
+import './index.css';
+import App from './App';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
+import BusinessOverviewPage from './pages/OverviewPage';
+import AccordionPage from './pages/AccordionPage';
+import AlertsPage from './pages/AlertsPage';
+import AvatarsPage from './pages/AvatarsPage';
+import BadgesPage from './pages/BadgesPage';
+import ButtonsPage from './pages/ButtonsPage';
+import CardsPage from './pages/CardsPage';
+import ChipsPage from './pages/ChipsPage';
+import DialogsPage from './pages/DialogsPage';
+import SelectorsPage from './pages/SelectorsPage';
+import Error404Page from './pages/Error404Page';
+import Error500Page from './pages/Error500Page';
+import InventoryReportPage from './pages/InventoryReportPage';
+import SalesReportPage from './pages/SalesReportPage';
+import SupplierReportPage from './pages/SupplierReportPage';
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<App />}>
-        <Route index element={<DashboardPage />} />
-        <Route index path="dashboard" element={<DashboardPage />} />
+        <Route index element={<Navigate to="/dashboard/overview" replace />} />
+        <Route path="dashboard">
+          <Route index element={<Navigate to="/dashboard/overview" replace />} />
+          <Route path="overview" element={<BusinessOverviewPage />} />
+          <Route path="inventory-report" element={<InventoryReportPage />} />
+          <Route path="sales-report" element={<SalesReportPage />} />
+          <Route path="supplier-report" element={<SupplierReportPage />} />
+        </Route>
         <Route path="components">
           <Route path="accordion" element={<AccordionPage />} />
           <Route path="alerts" element={<AlertsPage />} />
@@ -36,8 +45,10 @@ const Router = createBrowserRouter(
           <Route path="cards" element={<CardsPage />} />
           <Route path="chips" element={<ChipsPage />} />
           <Route path="dialogs" element={<DialogsPage />} />
+          <Route path="selectors" element={<SelectorsPage />} />
         </Route>
       </Route>
+      <Route path="login" element={<SignInPage />} />
       <Route path="auth">
         <Route path="sign-in" element={<SignInPage />} />
         <Route path="sign-up" element={<SignUpPage />} />
@@ -49,7 +60,7 @@ const Router = createBrowserRouter(
   )
 );
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={Router} />
   </React.StrictMode>

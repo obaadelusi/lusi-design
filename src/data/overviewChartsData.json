@@ -1,0 +1,31 @@
+{
+  "priceTrends": [
+    { "month": "Jan", "artemia": 40, "fishMeal": 95, "catfishJumbo": 4.5 },
+    { "month": "Feb", "artemia": 42, "fishMeal": 98, "catfishJumbo": 4.6 },
+    { "month": "Mar", "artemia": 41, "fishMeal": 102, "catfishJumbo": 4.8 },
+    { "month": "Apr", "artemia": 45, "fishMeal": 105, "catfishJumbo": 5.0 },
+    { "month": "May", "artemia": 44, "fishMeal": 100, "catfishJumbo": 4.9 },
+    { "month": "Jun", "artemia": 46, "fishMeal": 108, "catfishJumbo": 5.2 },
+    { "month": "Jul", "artemia": 48, "fishMeal": 112, "catfishJumbo": 5.5 },
+    { "month": "Aug", "artemia": 47, "fishMeal": 110, "catfishJumbo": 5.4 },
+    { "month": "Sep", "artemia": 49, "fishMeal": 115, "catfishJumbo": 5.6 },
+    { "month": "Oct", "artemia": 50, "fishMeal": 118, "catfishJumbo": 5.8 },
+    { "month": "Nov", "artemia": 52, "fishMeal": 120, "catfishJumbo": 5.9 },
+    { "month": "Dec", "artemia": 55, "fishMeal": 125, "catfishJumbo": 6.2 }
+  ],
+  "marketShare": [
+    { "crop": "Fish Feed", "percentage": 35 },
+    { "crop": "Live Fish", "percentage": 25 },
+    { "crop": "Raw Materials", "percentage": 20 },
+    { "crop": "Spawning Hormones", "percentage": 12 },
+    { "crop": "Equipment & Test Kits", "percentage": 8 }
+  ],
+  "monthlyVolumes": [
+    { "month": "Jul", "buy": 1240, "sell": 1100 },
+    { "month": "Aug", "buy": 1450, "sell": 1300 },
+    { "month": "Sep", "buy": 1320, "sell": 1400 },
+    { "month": "Oct", "buy": 1680, "sell": 1520 },
+    { "month": "Nov", "buy": 1750, "sell": 1610 },
+    { "month": "Dec", "buy": 1900, "sell": 1800 }
+  ]
+}

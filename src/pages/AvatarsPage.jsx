@@ -7,7 +7,7 @@ import { ClipboardFill, FolderFill, Search } from 'react-bootstrap-icons';
 
 const AvatarsPage = () => {
   React.useEffect(() => {
-    document.title = 'Avatars — Lusi Design';
+    document.title = 'Avatars — Components | Lusi Design';
   }, []);
   return (
     <div className="AvatarsPage">

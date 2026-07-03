@@ -1,0 +1,182 @@
+[
+  {
+    "id": "INV-001",
+    "name": "Artemia Cans (Fish Feed)",
+    "category": "Fish Feed",
+    "stockLevel": 120,
+    "unit": "Cans",
+    "reorderLevel": 150,
+    "status": "Low Stock",
+    "value": 5400.00
+  },
+  {
+    "id": "INV-002",
+    "name": "2mm Pellet Feed",
+    "category": "Fish Feed",
+    "stockLevel": 450,
+    "unit": "Bags (25kg)",
+    "reorderLevel": 200,
+    "status": "In Stock",
+    "value": 9000.00
+  },
+  {
+    "id": "INV-003",
+    "name": "6mm Pellet Feed",
+    "category": "Fish Feed",
+    "stockLevel": 380,
+    "unit": "Bags (25kg)",
+    "reorderLevel": 200,
+    "status": "In Stock",
+    "value": 8360.00
+  },
+  {
+    "id": "INV-004",
+    "name": "9mm Pellet Feed",
+    "category": "Fish Feed",
+    "stockLevel": 80,
+    "unit": "Bags (25kg)",
+    "reorderLevel": 100,
+    "status": "Low Stock",
+    "value": 2000.00
+  },
+  {
+    "id": "INV-005",
+    "name": "Catfish Fry",
+    "category": "Live Fish",
+    "stockLevel": 85000,
+    "unit": "Pcs",
+    "reorderLevel": 50000,
+    "status": "In Stock",
+    "value": 4250.00
+  },
+  {
+    "id": "INV-006",
+    "name": "Catfish Fingerlings",
+    "category": "Live Fish",
+    "stockLevel": 42000,
+    "unit": "Pcs",
+    "reorderLevel": 30000,
+    "status": "In Stock",
+    "value": 6300.00
+  },
+  {
+    "id": "INV-007",
+    "name": "Catfish Juvenile",
+    "category": "Live Fish",
+    "stockLevel": 5000,
+    "unit": "Pcs",
+    "reorderLevel": 10000,
+    "status": "Low Stock",
+    "value": 1500.00
+  },
+  {
+    "id": "INV-008",
+    "name": "Catfish Jumbo (Livestock)",
+    "category": "Live Fish",
+    "stockLevel": 1200,
+    "unit": "Pcs",
+    "reorderLevel": 500,
+    "status": "In Stock",
+    "value": 6600.00
+  },
+  {
+    "id": "INV-009",
+    "name": "Fish Meal (Raw Material)",
+    "category": "Raw Materials",
+    "stockLevel": 18,
+    "unit": "Tons",
+    "reorderLevel": 10,
+    "status": "In Stock",
+    "value": 21600.00
+  },
+  {
+    "id": "INV-010",
+    "name": "Blood Meal (Raw Material)",
+    "category": "Raw Materials",
+    "stockLevel": 5,
+    "unit": "Tons",
+    "reorderLevel": 8,
+    "status": "Low Stock",
+    "value": 4800.00
+  },
+  {
+    "id": "INV-011",
+    "name": "Ovaprim Hormone (10ml)",
+    "category": "Spawning Hormones",
+    "stockLevel": 15,
+    "unit": "Vials",
+    "reorderLevel": 30,
+    "status": "Low Stock",
+    "value": 375.00
+  },
+  {
+    "id": "INV-012",
+    "name": "Ovulin Hormone (10ml)",
+    "category": "Spawning Hormones",
+    "stockLevel": 60,
+    "unit": "Vials",
+    "reorderLevel": 30,
+    "status": "In Stock",
+    "value": 1320.00
+  },
+  {
+    "id": "INV-013",
+    "name": "Ovaspec Hormone (10ml)",
+    "category": "Spawning Hormones",
+    "stockLevel": 0,
+    "unit": "Vials",
+    "reorderLevel": 20,
+    "status": "Out of Stock",
+    "value": 0.00
+  },
+  {
+    "id": "INV-014",
+    "name": "Ammonia Test Kit",
+    "category": "Water Test Kits",
+    "stockLevel": 95,
+    "unit": "Kits",
+    "reorderLevel": 50,
+    "status": "In Stock",
+    "value": 1757.00
+  },
+  {
+    "id": "INV-015",
+    "name": "pH Test Kit",
+    "category": "Water Test Kits",
+    "stockLevel": 110,
+    "unit": "Kits",
+    "reorderLevel": 50,
+    "status": "In Stock",
+    "value": 1540.00
+  },
+  {
+    "id": "INV-016",
+    "name": "Nitrite Test Kit",
+    "category": "Water Test Kits",
+    "stockLevel": 42,
+    "unit": "Kits",
+    "reorderLevel": 50,
+    "status": "Low Stock",
+    "value": 756.00
+  },
+  {
+    "id": "INV-017",
+    "name": "Paddlewheel Aerator 2HP",
+    "category": "Equipment",
+    "stockLevel": 18,
+    "unit": "Units",
+    "reorderLevel": 5,
+    "status": "In Stock",
+    "value": 8100.00
+  },
+  {
+    "id": "INV-018",
+    "name": "Digital Scale 150kg",
+    "category": "Equipment",
+    "stockLevel": 8,
+    "unit": "Units",
+    "reorderLevel": 4,
+    "status": "In Stock",
+    "value": 1440.00
+  }
+]

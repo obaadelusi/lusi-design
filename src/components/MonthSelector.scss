@@ -1,0 +1,96 @@
+.MonthSelector {
+  position: relative;
+  display: inline-block;
+
+  .Selector-btn {
+    appearance: none;
+    background: var(--clr-bg-white);
+    border: 1px solid var(--grey-300);
+    color: var(--clr-text-grey);
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      border-color: var(--primary-clr);
+      color: var(--primary-clr);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+    }
+
+    svg {
+      color: var(--grey-500);
+      transition: color 0.2s;
+    }
+
+    &:hover svg {
+      color: var(--primary-clr);
+    }
+
+    .chevron-icon {
+      font-size: 12px;
+      transition: transform 0.2s;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .Selector-dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: var(--clr-bg-white);
+    border: 1px solid var(--grey-200);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    list-style: none;
+    min-width: 160px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    animation: slideInDown 0.15s ease-out;
+
+    li {
+      padding: 8px 12px;
+      font-size: 13.5px;
+      color: var(--clr-text-grey);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-weight: 400;
+
+      &:hover {
+        background-color: var(--primary-clr-light);
+        color: var(--primary-clr);
+      }
+
+      &.active {
+        background-color: var(--primary-clr);
+        color: var(--clr-text-white);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
